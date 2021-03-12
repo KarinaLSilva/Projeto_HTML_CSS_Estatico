@@ -49,8 +49,22 @@ header nav {
 }
 header nav li {
   margin: 0rem 1.5rem;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 }
+
+header .login-button{
+  padding: 0.9rem 3.8rem;
+  background: crimson;
+  border-radius: 3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+header .login-button:hover{
+  color:crimson;
+  background-color: white;
+}
+
 header nav li:first-child {
   margin-left: 0;
 }
@@ -73,6 +87,9 @@ header nav li:last-child {
   }
   header nav li {
     margin: 0rem 0.7rem;
+  }
+  header .login-button{
+    margin-top: 1.2rem;
   }
 }
 
@@ -137,7 +154,7 @@ section p {
 .banner-area h1 {
   margin-bottom: 1.5rem;
   font-size: 6.5rem;
-  font-family: merienda;
+  
 }
 
 .banner-area h3 {
@@ -151,6 +168,11 @@ section p {
   border-radius: 5rem;
   text-transform: uppercase;
 }
+
+.banner-area a.banner-btn:hover{
+  background: #a50424;
+}
+
 
 @media (max-width: 800px) {
   .banner-area {
@@ -168,6 +190,9 @@ section p {
 }
 
 /* ABOUT AREA */
+.services-area{
+  background-color: #f5f0f5;
+}
 
 ul.about-content {
   width: 100%;
@@ -219,6 +244,10 @@ ul.about-content {
   border-radius: 5rem;
   text-transform: uppercase;
   color: #fff;
+}
+
+.about-btn:hover{
+  background: #a50424;
 }
 
 @media (max-width: 1000px) {
@@ -329,4 +358,68 @@ footer {
   background-color: #000;
   padding: 2rem 0;
   font-size: 1.3rem;
+}
+
+/* LOGIN */
+
+.login-body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6)
+}
+
+.container{
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 0.5rem;
+}
+
+.container .title{
+  font-size: 2.5rem;
+  font-weight: 500;
+  position:relative;
+}
+
+.container .title::before{
+  content:'';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.3rem;
+  width: 3rem;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6)
+}
+
+.container form .user-details{
+display: flex;
+flex-wrap: wrap;
+font-size: 1.9rem;
+justify-content: space-between;
+margin:2rem 0rem 1.2rem 0rem;
+}
+
+form .user-details .input-box{
+  width: calc(100% / 2 - 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.user-details .input-box input{
+  height: 4.5rem;
+  width: 100%;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding-left: 1.5rem;
+  font-size: 1.6rem;
 }
