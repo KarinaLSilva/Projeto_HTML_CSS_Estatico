@@ -52,7 +52,7 @@ header nav li {
   font-size: 1.7rem;
 }
 
-header .login-button{
+header .login-button {
   padding: 0.9rem 3.8rem;
   background: crimson;
   border-radius: 3rem;
@@ -60,8 +60,8 @@ header .login-button{
   cursor: pointer;
 }
 
-header .login-button:hover{
-  color:crimson;
+header .login-button:hover {
+  color: crimson;
   background-color: white;
 }
 
@@ -88,7 +88,7 @@ header nav li:last-child {
   header nav li {
     margin: 0rem 0.7rem;
   }
-  header .login-button{
+  header .login-button {
     margin-top: 1.2rem;
   }
 }
@@ -154,7 +154,6 @@ section p {
 .banner-area h1 {
   margin-bottom: 1.5rem;
   font-size: 6.5rem;
-  
 }
 
 .banner-area h3 {
@@ -163,16 +162,18 @@ section p {
 }
 
 .banner-area a.banner-btn {
-  padding: 1.5rem 3.5rem;
+  padding: 1.3rem 2.5rem;
   background: crimson;
   border-radius: 5rem;
   text-transform: uppercase;
+  display: inline-block;
+  margin-right: 1rem;
 }
 
-.banner-area a.banner-btn:hover{
-  background: #a50424;
+.banner-area a.banner-btn:hover {
+  color: crimson;
+  background-color: white;
 }
-
 
 @media (max-width: 800px) {
   .banner-area {
@@ -190,7 +191,7 @@ section p {
 }
 
 /* ABOUT AREA */
-.services-area{
+.services-area {
   background-color: #f5f0f5;
 }
 
@@ -246,7 +247,7 @@ ul.about-content {
   color: #fff;
 }
 
-.about-btn:hover{
+.about-btn:hover {
   background: #a50424;
 }
 
@@ -262,36 +263,39 @@ ul.about-content {
 
 /* SERVICES AREA */
 
-#services {
+#portfolio {
   background: #ddd;
 }
 
-ul.services-content {
+ul.portfolio-content {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.services-content li {
+.portfolio-content li {
   padding: 0 3rem;
   flex-basis: 33%;
   text-align: center;
 }
 
-.services-content li i {
+.portfolio-content li i {
   font-size: 3rem;
   color: crimson;
   margin-bottom: 2.5rem;
 }
 
-.services-content li h4 {
+.portfolio-content a {
   font-size: 2rem;
-  margin-bottom: 2.5rem;
 }
 
-.services-content li p {
+.portfolio-content li p {
   margin: 0;
+}
+
+.portfolio-content a:hover {
+  color: crimson;
 }
 
 @media (max-width: 1000px) {
@@ -360,18 +364,18 @@ footer {
   font-size: 1.3rem;
 }
 
-/* LOGIN */
+/* LOGIN - CADASTRO*/
 
-.login-body{
+.login-body {
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6)
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
-.container{
+.container {
   max-width: 700px;
   width: 100%;
   background: #fff;
@@ -379,42 +383,42 @@ footer {
   border-radius: 0.5rem;
 }
 
-.container .title{
+.container .title {
   font-size: 2.5rem;
   font-weight: 500;
-  position:relative;
+  position: relative;
 }
 
-.container .title::before{
-  content:'';
+.container .title::before {
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   height: 0.3rem;
-  width: 3rem;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6)
+  width: 100%;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
-.container form .user-details{
-display: flex;
-flex-wrap: wrap;
-font-size: 1.9rem;
-justify-content: space-between;
-margin:2rem 0rem 1.2rem 0rem;
+.container form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.9rem;
+  justify-content: space-between;
+  margin: 2rem 0rem 1.2rem 0rem;
 }
 
-form .user-details .input-box{
+form .user-details .input-box {
   width: calc(100% / 2 - 2rem);
   margin-bottom: 1.5rem;
 }
 
-.user-details .input-box .details{
+.user-details .input-box .details {
   display: block;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
-.user-details .input-box input{
+.user-details .input-box input {
   height: 4.5rem;
   width: 100%;
   outline: none;
@@ -422,4 +426,129 @@ form .user-details .input-box{
   border: 1px solid #ccc;
   padding-left: 1.5rem;
   font-size: 1.6rem;
+  border-bottom-width: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #9b59b6;
+}
+
+form .gender-details .gender-title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+form .gender-details .category {
+  display: flex;
+  width: 80%;
+  margin: 1.4rem 0;
+  justify-content: space-between;
+  font-size: 1.7rem;
+}
+
+.gender-details .category label {
+  display: flex;
+  align-items: center;
+}
+
+.gender-details .category .dot {
+  height: 1.8rem;
+  width: 1.8rem;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 0.5rem;
+  border: 0.5rem solid transparent;
+  transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+  border-color: #d9d9d9;
+  background: #9b59b6;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form .button {
+  height: 4.5rem;
+  margin: 4.5rem 0rem;
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  letter-spacing: 0.1rem;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  cursor: pointer;
+}
+
+form .button input:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  .container form .user-details {
+    max-height: 30rem;
+    overflow-y: scroll;
+  }
+  form .gender-details .category {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-details::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+/* PÁGINA ERRO 404 */
+
+.erro-page {
+  height: 100vh;
+  background: #222;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.box h2 {
+  font-size: 15rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  animation: light 2s steps(1) infinite;
+}
+
+.box p {
+  font-size: 1.5rem;
+}
+
+@keyframes light {
+  33% {
+    text-shadow: 0 0 2rem #9b59b6;
+  }
+  66% {
+    text-shadow: 0 0 2rem #71b7e6;
+  }
 }
